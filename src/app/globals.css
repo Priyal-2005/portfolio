@@ -1235,6 +1235,7 @@ section {
 .project-image-container {
     position: relative;
     overflow: hidden;
+    min-height: 200px;
 }
 
 .project-card img {

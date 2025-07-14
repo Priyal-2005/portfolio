@@ -20,10 +20,8 @@ export default function Projects() {
       title: "Calculator",
       description: "Basic calculator with dark mode, delete functionality, and modern UI experience. Supports complex calculations with a clean, intuitive interface design.",
       image: "/images/Calculator.jpg",
-      // Add your GitHub repository link here
-      repo: "https://github.com/Priyal-2005/Calculator", // Replace with actual repo URL
-      // Add your live demo link here
-      live: "https://priyal-2005.github.io/Calculator/", // Replace with actual demo URL
+      repo: "https://github.com/Priyal-2005/Calculator",
+      live: "https://priyal-2005.github.io/Calculator/",
     },
     {
       title: "BMI Calculator",
@@ -52,7 +50,7 @@ export default function Projects() {
       image: "/images/loan-calculator.jpg",
       status: "Work in Progress",
       repo: "https://github.com/Priyal-2005/Loan-Calculator-App",
-      live: null, // Will be added when project is completed
+      live: null,
     },
   ];
 
@@ -84,7 +82,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div className="project-card" key={index}>
               <div className="project-image-container">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title}/>
                 {project.status && (
                   <div className="project-status">
                     <span>{project.status}</span>
