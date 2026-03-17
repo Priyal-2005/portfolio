@@ -12,6 +12,26 @@ export default function ProjectCard({ project }) {
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
 
+                {(project.problem || project.solution || project.impact) && (
+                    <div className="project-details">
+                        {project.problem && (
+                            <div className="detail-item">
+                                <span className="detail-label">Problem:</span> {project.problem}
+                            </div>
+                        )}
+                        {project.solution && (
+                            <div className="detail-item">
+                                <span className="detail-label">Solution:</span> {project.solution}
+                            </div>
+                        )}
+                        {project.impact && (
+                            <div className="detail-item">
+                                <span className="detail-label">Impact:</span> {project.impact}
+                            </div>
+                        )}
+                    </div>
+                )}
+
                 {project.techStack && (
                     <div className="tech-tags">
                         {project.techStack.map((tech) => (

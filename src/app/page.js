@@ -1,134 +1,177 @@
 import './globals.css';
 import Link from 'next/link';
+import ExperienceCard from './components/ExperienceCard';
+import ProjectCard from './components/ProjectCard';
+import CertificationCard from './components/CertificationCard';
+import SectionHeading from './components/SectionHeading';
+import SocialLinks from './components/SocialLinks';
+import { personalInfo, experience, projects, certifications, skills } from './data/portfolioData';
 
 export default function Home() {
   return (
     <>
       <header className="header">
-        <a href="#" className="logo">Portfolio.</a>
+        <Link href="/" className="logo">Portfolio.</Link>
 
-        <nav className="navbar">
-          <a href="#home" style={{ '--i': 1 }} className="active">Home</a>
-          <Link href="/about" style={{ '--i': 2 }}>About Me</Link>
-          <Link href="/skills" style={{ '--i': 3 }}>Skills</Link>
-          <Link href="/projects" style={{ '--i': 4 }}>Projects</Link>
-          <a href="#contact" style={{ '--i': 5 }}>Contact</a>
+        <nav className="navbar" aria-label="Main Navigation">
+          <a href="#home" style={{ '--i': 1 }}>Home</a>
+          <a href="#about" style={{ '--i': 2 }}>About</a>
+          <a href="#skills" style={{ '--i': 3 }}>Skills</a>
+          <a href="#experience" style={{ '--i': 4 }}>Experience</a>
+          <a href="#projects" style={{ '--i': 5 }}>Projects</a>
+          <a href="#certifications" style={{ '--i': 6 }}>Certifications</a>
+          <a href="#contact" style={{ '--i': 7 }}>Contact</a>
         </nav>
       </header>
 
-      <section className="home" id="home">
-        <div className="home-content">
-          <h3>Hello, it's Me</h3>
-          <h1>Priyal Sarda</h1>
-          <h3>And I'm a <span className="text">Student Entrepreneur</span></h3>
-          <p>Co-founder of Coding Champs and Founder of PhotoDost. Student entrepreneur passionate about AI, and turning real-world problems into impactful solutions. I specialize in Python, JavaScript, React, and have a strong foundation in data structures and algorithms.</p>
-          
-          <div className="home-sci">
-            <a
-              href="https://www.linkedin.com/in/priyal-sarda-a38793323/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ '--i': 7 }}
-              aria-label="LinkedIn"
-            >
-              <i className='bx bxl-linkedin'></i>
-            </a>
-            <a
-              href="mailto:priyal.sarda2005@gmail.com"
-              style={{ '--i': 8 }}
-              aria-label="Gmail"
-            >
-              <i className='bx bxl-gmail'></i>
-            </a>
-            <a href="https://github.com/Priyal-2005" style={{ '--i': 9 }} aria-label="GitHub">
-              <i className='bx bxl-github'></i>
-            </a>
-            <a href="https://www.instagram.com/itspriyalsarda/?__pwa=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ '--i': 10 }}
-              aria-label="Instagram"
-            >
-              <i className='bx bxl-instagram'></i>
-            </a>
+      <main>
+        {/* Hero Section */}
+        <section className="home" id="home">
+          <div className="home-content">
+            <h3>Hi, I'm</h3>
+            <h1>{personalInfo.name}</h1>
+            <h3><span className="text">{personalInfo.role}</span></h3>
+            <p>{personalInfo.bio}</p>
+
+            <SocialLinks className="home-sci" />
+
+            <div className="btn-group">
+              <a href={personalInfo.resumeUrl} className="btn-box resume-btn" download>Download Resume</a>
+              <a href="#contact" className="btn-box btn-secondary">Get In Touch</a>
+            </div>
           </div>
-          
-          <Link href="/about" className="btn-box">More About Me</Link>
-        </div>
 
-        <div className="profile-container">
-          <img src="/images/profile.jpg" alt="Priyal Sarda" className="profile-pic" />
-        </div>
-      </section>
-
-      <section className="contact" id="contact">
-        <div className="contact-text">
-          <h2>Contact <span>Me</span></h2>
-          <h4>Let's Work Together</h4>
-          <p>I'm always interested in new opportunities and collaborations. Whether you have a project in mind, want to discuss business ideas, or just want to connect, feel free to reach out!</p>
-          
-          <div className="contact-list">
-            <li><i className='bx bxs-send'></i> priyal.sarda2005@gmail.com</li>
-            <li><i className='bx bxs-phone'></i> +91 93911 54230</li>
-            <li><i className='bx bxs-location-plus'></i> Delhi, India</li>
+          <div className="profile-container" role="img" aria-label={`Profile picture of ${personalInfo.name}`}>
+            <div className="profile-box">
+              <img src="/images/profile.JPG" alt={personalInfo.name} className="profile-pic" />
+            </div>
           </div>
-          
-          <div className="contact-icons">
-            <a
-              href="https://www.linkedin.com/in/priyal-sarda-a38793323/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ '--i': 7 }}
-              aria-label="LinkedIn"
-            >
-              <i className='bx bxl-linkedin'></i>
-            </a>
-            <a
-              href="mailto:priyal.sarda2005@gmail.com"
-              style={{ '--i': 8 }}
-              aria-label="Gmail"
-            >
-              <i className='bx bxl-gmail'></i>
-            </a>
-            <a
-              href="https://github.com/Priyal-2005"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ '--i': 9 }}
-              aria-label="GitHub"
-            >
-              <i className='bx bxl-github'></i>
-            </a>
-            <a
-              href="https://www.instagram.com/itspriyalsarda/?__pwa=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ '--i': 10 }}
-              aria-label="Instagram"
-            >
-              <i className='bx bxl-instagram'></i>
-            </a>
+        </section>
+
+        {/* About Section */}
+        <section className="about" id="about">
+          <div className="about-img">
+            <img src="/images/profile.JPG" alt="About Priyal" />
           </div>
+          <div className="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>Full-Stack Engineer & Founder</h4>
+            <p>
+              I am a passionate developer with a knack for building scalable applications and solving real-world problems.
+              With a strong foundation in computer science and hands-on experience in modern web technologies, I love
+              transforming ideas into robust products. My journey involves not just writing clean code, but also leading technical teams and successfully launching
+              ventures like Coding Champs and PhotoDost. I thrive in dynamic environments where technology meets business impact.
+            </p>
+            <a href="#experience" className="btn-box">View Experience</a>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="skills" id="skills">
+          <SectionHeading title="Technical" subtitle="Skills" />
+
+          <div className="skills-container">
+            {Object.entries(skills).map(([category, items]) => (
+              <div key={category} className="skill-category" data-category={category}>
+                <h3>{category}</h3>
+                <div className="skill-list">
+                  {items.map((skill) => (
+                    <span key={skill} className="skill-item">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section className="experience" id="experience">
+          <SectionHeading title="Work" subtitle="Experience" />
+          <div className="experience-container">
+            {experience.map((exp, index) => (
+              <ExperienceCard key={index} experience={exp} />
+            ))}
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="projects" id="projects">
+          <SectionHeading title="Featured" subtitle="Projects" />
+          <div className="projects-container">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+        </section>
+
+        {/* Certifications Section */}
+        <section className="certifications" id="certifications">
+          <SectionHeading title="My" subtitle="Certifications" />
+          <div className="certifications-container">
+            {certifications.map((cert, index) => (
+              <CertificationCard key={index} cert={cert} />
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="contact" id="contact">
+          <div className="contact-content">
+            <SectionHeading title="Contact" subtitle="Me" />
+            <p className="contact-desc">
+              I am currently open to full-time, internship, and freelance opportunities. 
+              Whether you have a strategic project, need full-stack expertise, or just want to connect—let's talk.
+            </p>
+
+            <div className="contact-details">
+              <div className="contact-item">
+                <i className='bx bxs-envelope'></i>
+                <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+              </div>
+              <div className="contact-item">
+                <i className='bx bxs-phone'></i>
+                <span>{personalInfo.phone}</span>
+              </div>
+              <div className="contact-item">
+                <i className='bx bxs-location-plus'></i>
+                <span>{personalInfo.location}</span>
+              </div>
+            </div>
+
+            <SocialLinks className="contact-socials" />
+            
+            <div className="contact-resume-cta" style={{ marginTop: '2rem' }}>
+              <a href={personalInfo.resumeUrl} className="btn-box resume-btn" download>
+                <i className='bx bxs-download' style={{ marginRight: '8px' }}></i> Download Resume
+              </a>
+            </div>
+          </div>
+
+          <div className="contact-form-container">
+            <form className="contact-form" aria-label="Contact Form">
+              <div className="input-box">
+                <input type="text" placeholder="Full Name" required aria-label="Full Name" />
+                <input type="email" placeholder="Email Address" required aria-label="Email Address" />
+              </div>
+              <div className="input-box">
+                <input type="tel" placeholder="Mobile Number" aria-label="Mobile Number" />
+                <input type="text" placeholder="Email Subject" aria-label="Email Subject" />
+              </div>
+              <textarea cols="30" rows="10" placeholder="Your Message" required aria-label="Your Message"></textarea>
+              <button type="submit" className="btn-box form-btn">Send Message</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <div className="footer-text">
+          <p>Copyright &copy; 2025 by {personalInfo.name} | All Rights Reserved.</p>
         </div>
-
-        <div className="contact-form">
-          <form action="">
-            <input type="text" placeholder="Enter Your Name" required />
-            <input type="email" placeholder="Enter Your Email" required />
-            <input type="text" placeholder="Enter Your Subject" required />
-            <textarea placeholder="Enter Your Message" required></textarea>
-            <input type="submit" value="Submit" className="send" />
-          </form>
+        <div className="footer-iconTop">
+          <a href="#home" aria-label="Go to top"><i className='bx bx-up-arrow-alt'></i></a>
         </div>
-      </section>
-
-      <div className="last-text">
-        <p>Developed by Priyal Sarda © 2024</p>
-      </div>
-
-      <a href="#home" className="top">
-        <i className='bx bx-up-arrow-alt'></i>
-      </a>
+      </footer>
     </>
   );
 }
