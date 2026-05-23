@@ -1,28 +1,19 @@
 import './globals.css';
-import Link from 'next/link';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import DomainCard from './components/DomainCard';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
 import CertificationCard from './components/CertificationCard';
 import SectionHeading from './components/SectionHeading';
 import SocialLinks from './components/SocialLinks';
 import { personalInfo, experience, projects, certifications, skills } from './data/portfolioData';
+import { domains } from './data/commonData';
 
 export default function Home() {
   return (
     <>
-      <header className="header">
-        <Link href="/" className="logo">Portfolio.</Link>
-
-        <nav className="navbar" aria-label="Main Navigation">
-          <a href="#home" style={{ '--i': 1 }}>Home</a>
-          <a href="#about" style={{ '--i': 2 }}>About</a>
-          <a href="#skills" style={{ '--i': 3 }}>Skills</a>
-          <a href="#experience" style={{ '--i': 4 }}>Experience</a>
-          <a href="#projects" style={{ '--i': 5 }}>Projects</a>
-          <a href="#certifications" style={{ '--i': 6 }}>Certifications</a>
-          <a href="#contact" style={{ '--i': 7 }}>Contact</a>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         {/* Hero Section */}
@@ -114,6 +105,27 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Domain Navigation Section */}
+        <section className="domains" id="domains">
+          <SectionHeading title="Explore" subtitle="Domains" />
+          <p className="domains-desc">
+            My work spans two engineering disciplines. Dive into either domain to see
+            focused experience, projects, and skills.
+          </p>
+          <div className="domains-container">
+            {domains.map((domain) => (
+              <DomainCard
+                key={domain.id}
+                title={domain.title}
+                description={domain.description}
+                href={domain.href}
+                icon={domain.icon}
+                tags={domain.tags}
+              />
+            ))}
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="contact" id="contact">
           <div className="contact-content">
@@ -164,14 +176,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-text">
-          <p>Copyright &copy; 2025 by {personalInfo.name} | All Rights Reserved.</p>
-        </div>
-        <div className="footer-iconTop">
-          <a href="#home" aria-label="Go to top"><i className='bx bx-up-arrow-alt'></i></a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -4,17 +4,29 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-export default function Header() {
+/**
+ * Default nav items used on the main dashboard (/).
+ * Domain pages pass their own navItems to override these.
+ */
+const defaultNavItems = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#domains', label: 'Domains' },
+  { href: '#contact', label: 'Contact' },
+];
+
+/**
+ * Header — shared across all pages.
+ *
+ * Props:
+ *  - navItems {Array<{href: string, label: string}>}
+ *    Optional. Overrides default nav links. Pass domain-specific
+ *    hash links when rendering a domain page (e.g. /ai-ml, /fullstack).
+ */
+export default function Header({ navItems = defaultNavItems }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/skills', label: 'Skills' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/#contact', label: 'Contact' },
-  ];
 
   return (
     <header className="header" role="banner">
@@ -35,14 +47,14 @@ export default function Header() {
 
       <nav className={`navbar ${menuOpen ? 'open' : ''}`} role="navigation" aria-label="Main navigation">
         {navItems.map((item) => (
-          <Link
+          <a
             key={item.href}
             href={item.href}
             className={pathname === item.href ? 'active' : ''}
             onClick={() => setMenuOpen(false)}
           >
             {item.label}
-          </Link>
+          </a>
         ))}
       </nav>
     </header>

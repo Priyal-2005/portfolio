@@ -825,3 +825,139 @@ section {
         text-align: center;
     }
 }
+
+/* =============================================
+   Domain Navigation Section (/)
+   ============================================= */
+
+.domains {
+    background: var(--second-bg-color);
+    border-top: 1px solid var(--glass-border);
+}
+
+.domains-desc {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 540px;
+    margin: -1.5rem auto 3rem;
+    line-height: 1.7;
+}
+
+.domains-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* DomainCard Component */
+.domain-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.domain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--main-color), var(--accent-color));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--glass-border-hover);
+    background: rgba(30, 41, 59, 0.7);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.domain-card:hover::before {
+    opacity: 1;
+}
+
+.domain-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(168, 85, 247, 0.15));
+    border-radius: 0.75rem;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    font-size: 1.4rem;
+    color: var(--main-color);
+    flex-shrink: 0;
+}
+
+.domain-card-content {
+    flex: 1;
+}
+
+.domain-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.domain-card-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.domain-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.domain-card-tag {
+    font-size: 0.75rem;
+    color: var(--highlight-color);
+    background: rgba(45, 212, 191, 0.08);
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    padding: 0.2rem 0.55rem;
+    border-radius: 1rem;
+}
+
+.domain-card-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.domain-card:hover .domain-card-arrow {
+    color: var(--main-color);
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .domains-container {
+        grid-template-columns: 1fr;
+    }
+
+    .domain-card {
+        padding: 1.5rem;
+    }
+}
