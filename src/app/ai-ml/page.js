@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import SectionHeading from '../components/SectionHeading';
 import ExperienceCard from '../components/ExperienceCard';
 import ProjectCard from '../components/ProjectCard';
-import CertificationCard from '../components/CertificationCard';
+import TimelineItem from '../components/TimelineItem';
 import SocialLinks from '../components/SocialLinks';
 import { personalInfo } from '../data/commonData';
 import {
@@ -17,11 +17,13 @@ import {
 export const metadata = {
     title: 'Priyal Sarda | AI / ML Engineer',
     description:
-        'AI & Machine Learning portfolio of Priyal Sarda. NLP pipelines, intelligent systems, and applied ML projects.',
+        'AI & Machine Learning portfolio of Priyal Sarda. Specially optimized for GenAI, RAG, and NLP engineering roles.',
     keywords: [
         'Priyal Sarda',
         'AI Engineer',
         'Machine Learning',
+        'GenAI',
+        'RAG',
         'NLP',
         'Python',
         'Deep Learning',
@@ -42,7 +44,7 @@ export default function AiMlPage() {
         <>
             <Header navItems={aiMlNavItems} />
 
-            <main>
+            <main className="domain-ai-ml">
                 {/* Hero Section */}
                 <section className="home" id="home">
                     <div className="home-content">
@@ -101,11 +103,12 @@ export default function AiMlPage() {
                 </section>
 
                 {/* Certifications Section */}
-                <section className="certifications" id="certifications">
+                <section className="timeline-section" id="certifications">
                     <SectionHeading title="AI/ML" subtitle="Certifications" />
-                    <div className="certifications-container">
+                    <div className="timeline-container">
+                        <div className="timeline-line"></div>
                         {aiMlCertifications.map((cert, index) => (
-                            <CertificationCard key={index} cert={cert} />
+                            <TimelineItem key={index} cert={cert} />
                         ))}
                     </div>
                 </section>

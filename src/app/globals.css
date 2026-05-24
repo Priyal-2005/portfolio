@@ -491,6 +491,24 @@ section {
     margin-bottom: 1.5rem;
 }
 
+.project-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+    background: rgba(8, 14, 26, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 5;
+}
+
 .project-image-container img {
     width: 100%;
     height: 180px;
@@ -960,4 +978,417 @@ section {
     .domain-card {
         padding: 1.5rem;
     }
+}
+
+/* =============================================
+   Certifications Timeline Section
+   ============================================= */
+
+.timeline-section {
+    padding: 6rem 8% 4rem;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--main-color), var(--accent-color));
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 3.5rem;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end;
+    margin-left: 50%;
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.timeline-dot {
+    position: absolute;
+    right: -10px;
+    top: 6px;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-color);
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+    z-index: 10;
+    transition: var(--transition);
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px;
+    right: auto;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.15);
+    box-shadow: 0 0 12px var(--main-color);
+}
+
+.timeline-item:nth-child(even):hover .timeline-dot {
+    box-shadow: 0 0 12px var(--accent-color);
+}
+
+.timeline-content {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    width: 90%;
+    transition: var(--transition);
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 2.5rem;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 2.5rem;
+}
+
+.timeline-content:hover {
+    transform: translateY(-2px);
+    border-color: var(--glass-border-hover);
+    background: rgba(15, 23, 42, 0.85); /* Slightly darker focus background for premium dark aesthetic */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 18px; /* Adjusted alignment to match metadata line */
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.08);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.08) transparent transparent;
+}
+
+.timeline-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+    background: rgba(45, 212, 191, 0.08);
+    border: 1px solid rgba(45, 212, 191, 0.15);
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.timeline-category-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--main-color);
+    background: rgba(96, 165, 250, 0.08);
+    border: 1px solid rgba(96, 165, 250, 0.15);
+    padding: 0.2rem 0.7rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.timeline-item:nth-child(even) .timeline-category-badge {
+    color: var(--accent-color);
+    background: rgba(168, 85, 247, 0.08);
+    border: 1px solid rgba(168, 85, 247, 0.15);
+}
+
+.timeline-title {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.timeline-issuer {
+    font-size: 0.95rem;
+    color: var(--main-color);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-certificate {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.timeline-certificate i {
+    font-size: 1.1rem;
+}
+
+.timeline-certificate:hover {
+    color: var(--main-color);
+    transform: translateX(2px);
+}
+
+/* Timeline Responsive Styles */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 40px;
+        padding-bottom: 2.5rem;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .timeline-dot {
+        left: 10px !important;
+        right: auto !important;
+        border-color: var(--main-color) !important;
+        box-shadow: 0 0 10px rgba(96, 165, 250, 0.4) !important;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-right: 0;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 0;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-content::before {
+        left: -10px !important;
+        right: auto !important;
+        border-width: 10px 10px 10px 0 !important;
+        border-color: transparent rgba(255, 255, 255, 0.08) transparent transparent !important;
+    }
+}
+
+/* =============================================================================
+   DOMAIN THEMING SYSTEM
+   Scoped CSS variable overrides. All child components automatically inherit
+   the domain palette via --main-color, --accent-color, --highlight-color.
+   ============================================================================= */
+
+/* ---- AI/ML Domain: Futuristic / Research / GenAI ---- */
+.domain-ai-ml {
+    --main-color: #818cf8;       /* Indigo 400 — futuristic intelligence */
+    --accent-color: #c084fc;     /* Purple 400 — GenAI experimental */
+    --highlight-color: #22d3ee;  /* Cyan 400 — neural accent */
+}
+
+/* Glow-style card hover for AI/ML: subtle purple haze */
+.domain-ai-ml .experience-card:hover,
+.domain-ai-ml .project-card:hover,
+.domain-ai-ml .skill-category:hover {
+    box-shadow: 0 8px 30px rgba(129, 140, 248, 0.12),
+                0 0 0 1px rgba(192, 132, 252, 0.08);
+}
+
+/* AI/ML resume button gradient */
+.domain-ai-ml .resume-btn {
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+}
+.domain-ai-ml .resume-btn:hover {
+    box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4);
+}
+
+/* AI/ML primary button hover glow */
+.domain-ai-ml .btn-box:hover {
+    box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+}
+
+/* AI/ML section heading gradient */
+.domain-ai-ml .section-heading span {
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* AI/ML profile border gradient */
+.domain-ai-ml .profile-box {
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+}
+
+/* AI/ML tech tag tint */
+.domain-ai-ml .tech-tag {
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.08);
+    border-color: rgba(34, 211, 238, 0.2);
+}
+
+/* AI/ML skill item hover */
+.domain-ai-ml .skill-item:hover {
+    border-color: #818cf8;
+    color: #818cf8;
+}
+
+/* AI/ML timeline line gradient */
+.domain-ai-ml .timeline-line {
+    background: linear-gradient(to bottom, #818cf8, #c084fc);
+}
+
+/* AI/ML timeline dots */
+.domain-ai-ml .timeline-dot {
+    border-color: #818cf8;
+    box-shadow: 0 0 10px rgba(129, 140, 248, 0.4);
+}
+.domain-ai-ml .timeline-item:nth-child(even) .timeline-dot {
+    border-color: #c084fc;
+    box-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+}
+
+/* AI/ML timeline date badge */
+.domain-ai-ml .timeline-date {
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.08);
+    border-color: rgba(34, 211, 238, 0.15);
+}
+
+/* AI/ML timeline category badge */
+.domain-ai-ml .timeline-category-badge {
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.08);
+    border-color: rgba(129, 140, 248, 0.15);
+}
+.domain-ai-ml .timeline-item:nth-child(even) .timeline-category-badge {
+    color: #c084fc;
+    background: rgba(192, 132, 252, 0.08);
+    border-color: rgba(192, 132, 252, 0.15);
+}
+
+/* ---- Fullstack Domain: SaaS / Product / Engineering ---- */
+.domain-fullstack {
+    --main-color: #60a5fa;       /* Blue 400 — solid engineering */
+    --accent-color: #34d399;     /* Emerald 400 — product growth */
+    --highlight-color: #34d399;  /* Emerald 400 — consistent system accent */
+}
+
+/* Structured card hover for Fullstack: clean depth shadows */
+.domain-fullstack .experience-card:hover,
+.domain-fullstack .project-card:hover,
+.domain-fullstack .skill-category:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(52, 211, 153, 0.06);
+}
+
+/* Fullstack resume button gradient */
+.domain-fullstack .resume-btn {
+    background: linear-gradient(135deg, #60a5fa, #34d399);
+}
+.domain-fullstack .resume-btn:hover {
+    box-shadow: 0 8px 25px rgba(52, 211, 153, 0.35);
+}
+
+/* Fullstack primary button hover */
+.domain-fullstack .btn-box:hover {
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.35);
+}
+
+/* Fullstack section heading gradient */
+.domain-fullstack .section-heading span {
+    background: linear-gradient(135deg, #60a5fa, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Fullstack profile border gradient */
+.domain-fullstack .profile-box {
+    background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+}
+
+/* Fullstack tech tag tint */
+.domain-fullstack .tech-tag {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.08);
+    border-color: rgba(52, 211, 153, 0.2);
+}
+
+/* Fullstack skill item hover */
+.domain-fullstack .skill-item:hover {
+    border-color: #34d399;
+    color: #34d399;
+}
+
+/* Fullstack experience card left-border accent on hover */
+.domain-fullstack .experience-card:hover {
+    border-left-color: #34d399;
+}
+
+/* Fullstack project badge tint */
+.domain-fullstack .project-badge {
+    color: #34d399;
+    border-color: rgba(52, 211, 153, 0.3);
+}
+
+/* Fullstack card hover top-bar gradient */
+.domain-fullstack .experience-card:hover::before,
+.domain-fullstack .project-card:hover::before,
+.domain-fullstack .skill-category:hover::before {
+    background: linear-gradient(90deg, #60a5fa, #34d399);
 }

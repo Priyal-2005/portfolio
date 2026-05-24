@@ -40,7 +40,7 @@ export default function FullstackPage() {
         <>
             <Header navItems={fullstackNavItems} />
 
-            <main>
+            <main className="domain-fullstack">
                 {/* Hero Section */}
                 <section className="home" id="home">
                     <div className="home-content">
