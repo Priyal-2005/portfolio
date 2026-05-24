@@ -2,13 +2,16 @@ import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import DomainCard from './components/DomainCard';
-import ExperienceCard from './components/ExperienceCard';
-import ProjectCard from './components/ProjectCard';
 import CertificationCard from './components/CertificationCard';
 import SectionHeading from './components/SectionHeading';
 import SocialLinks from './components/SocialLinks';
-import { personalInfo, experience, projects, certifications, skills } from './data/portfolioData';
-import { domains } from './data/commonData';
+import {
+  personalInfo,
+  homeAbout,
+  homeSkills,
+  homeCertifications,
+  domains,
+} from './data/commonData';
 
 export default function Home() {
   return (
@@ -19,7 +22,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="home" id="home">
           <div className="home-content">
-            <h3>Hi, I'm</h3>
+            <h3>Hi, I&apos;m</h3>
             <h1>{personalInfo.name}</h1>
             <h3><span className="text">{personalInfo.role}</span></h3>
             <p>{personalInfo.bio}</p>
@@ -39,75 +42,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section className="about" id="about">
-          <div className="about-img">
-            <img src="/images/profile.JPG" alt="About Priyal" />
-          </div>
-          <div className="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>Full-Stack Engineer & Founder</h4>
-            <p>
-              I am a passionate developer with a knack for building scalable applications and solving real-world problems.
-              With a strong foundation in computer science and hands-on experience in modern web technologies, I love
-              transforming ideas into robust products. My journey involves not just writing clean code, but also leading technical teams and successfully launching
-              ventures like Coding Champs and PhotoDost. I thrive in dynamic environments where technology meets business impact.
-            </p>
-            <a href="#experience" className="btn-box">View Experience</a>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section className="skills" id="skills">
-          <SectionHeading title="Technical" subtitle="Skills" />
-
-          <div className="skills-container">
-            {Object.entries(skills).map(([category, items]) => (
-              <div key={category} className="skill-category" data-category={category}>
-                <h3>{category}</h3>
-                <div className="skill-list">
-                  {items.map((skill) => (
-                    <span key={skill} className="skill-item">{skill}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Experience Section */}
-        <section className="experience" id="experience">
-          <SectionHeading title="Work" subtitle="Experience" />
-          <div className="experience-container">
-            {experience.map((exp, index) => (
-              <ExperienceCard key={index} experience={exp} />
-            ))}
-          </div>
-        </section>
-
-        {/* Projects Section */}
-        <section className="projects" id="projects">
-          <SectionHeading title="Featured" subtitle="Projects" />
-          <div className="projects-container">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
-        </section>
-
-        {/* Certifications Section */}
-        <section className="certifications" id="certifications">
-          <SectionHeading title="My" subtitle="Certifications" />
-          <div className="certifications-container">
-            {certifications.map((cert, index) => (
-              <CertificationCard key={index} cert={cert} />
-            ))}
-          </div>
-        </section>
-
-        {/* Domain Navigation Section */}
+        {/* Domain Navigation Section — primary navigation layer */}
         <section className="domains" id="domains">
-          <SectionHeading title="Explore" subtitle="Domains" />
+          <SectionHeading title="Explore My" subtitle="Engineering Domains" />
           <p className="domains-desc">
             My work spans two engineering disciplines. Dive into either domain to see
             focused experience, projects, and skills.
@@ -121,7 +58,51 @@ export default function Home() {
                 href={domain.href}
                 icon={domain.icon}
                 tags={domain.tags}
+                theme={domain.theme}
               />
+            ))}
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="about" id="about">
+          <div className="about-img">
+            <img src="/images/profile.JPG" alt="About Priyal" />
+          </div>
+          <div className="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>{homeAbout.subtitle}</h4>
+            {homeAbout.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+            <a href="#domains" className="btn-box">Explore Domains</a>
+          </div>
+        </section>
+
+        {/* Unified Skills Section */}
+        <section className="skills" id="skills">
+          <SectionHeading title="Technical" subtitle="Skills" />
+
+          <div className="skills-container">
+            {Object.entries(homeSkills).map(([category, items]) => (
+              <div key={category} className="skill-category" data-category={category}>
+                <h3>{category}</h3>
+                <div className="skill-list">
+                  {items.map((skill) => (
+                    <span key={skill} className="skill-item">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Certifications Section — Entrepreneurship & Cross-Domain */}
+        <section className="certifications" id="certifications">
+          <SectionHeading title="Entrepreneurship" subtitle="Certifications" />
+          <div className="certifications-container">
+            {homeCertifications.map((cert, index) => (
+              <CertificationCard key={index} cert={cert} />
             ))}
           </div>
         </section>
@@ -132,7 +113,7 @@ export default function Home() {
             <SectionHeading title="Contact" subtitle="Me" />
             <p className="contact-desc">
               I am currently open to full-time, internship, and freelance opportunities. 
-              Whether you have a strategic project, need full-stack expertise, or just want to connect—let's talk.
+              Whether you have a strategic project, need full-stack expertise, or just want to connect—let&apos;s talk.
             </p>
 
             <div className="contact-details">

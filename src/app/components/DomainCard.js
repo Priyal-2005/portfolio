@@ -2,18 +2,21 @@ import Link from 'next/link';
 
 /**
  * DomainCard
- * Navigation card for the homepage domains section.
+ * Premium navigation card for the homepage domains section.
  *
  * Props:
- *  - title      {string}   Domain title (e.g. "AI / ML Engineer")
- *  - description{string}   Short domain description
- *  - href       {string}   Route to navigate to (e.g. "/ai-ml")
- *  - icon       {string}   Boxicons class name (e.g. "bx bx-brain")
- *  - tags       {string[]} Tech stack tags to display
+ *  - title       {string}   Domain title (e.g. "AI / ML Engineer")
+ *  - description {string}   Short domain description
+ *  - href        {string}   Route to navigate to (e.g. "/ai-ml")
+ *  - icon        {string}   Boxicons class name (e.g. "bx bx-brain")
+ *  - tags        {string[]} Tech stack tags to display
+ *  - theme       {string}   "ai-ml" | "fullstack" — applies per-card accent colors
  */
-export default function DomainCard({ title, description, href, icon, tags = [] }) {
+export default function DomainCard({ title, description, href, icon, tags = [], theme = '' }) {
+    const themeClass = theme ? `domain-card--${theme}` : '';
+
     return (
-        <Link href={href} className="domain-card" aria-label={`Explore ${title} portfolio`}>
+        <Link href={href} className={`domain-card ${themeClass}`} aria-label={`Explore ${title} portfolio`}>
             <div className="domain-card-icon">
                 <i className={icon}></i>
             </div>
@@ -27,9 +30,9 @@ export default function DomainCard({ title, description, href, icon, tags = [] }
                         ))}
                     </div>
                 )}
-            </div>
-            <div className="domain-card-arrow">
-                <i className="bx bx-right-arrow-alt"></i>
+                <span className="domain-card-cta">
+                    Explore Portfolio <i className="bx bx-right-arrow-alt"></i>
+                </span>
             </div>
         </Link>
     );
