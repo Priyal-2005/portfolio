@@ -1,17 +1,18 @@
-import Image from 'next/image';
-
 export default function ProjectCard({ project }) {
     return (
         <article className="project-card">
-            <div className="project-image-container">
-                <Image src={project.image} alt={`Screenshot of ${project.title}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
-                {project.status && (
-                    <span className="project-badge">{project.status}</span>
-                )}
-            </div>
-
             <div className="project-info">
-                <h3 className="project-title">{project.title}</h3>
+                <div className="project-header">
+                    <h3 className="project-title">{project.title}</h3>
+                    {project.status && (
+                        <span className="project-badge">{project.status}</span>
+                    )}
+                </div>
+
+                {project.contextNote && (
+                    <p className="project-context">{project.contextNote}</p>
+                )}
+
                 <p className="project-description">{project.description}</p>
 
                 {(project.problem || project.solution || project.impact) && (
