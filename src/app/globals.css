@@ -9,11 +9,11 @@
     --accent-color: #a855f7; /* Purple 500 */
     --highlight-color: #2dd4bf; /* Teal 400 */
     --glass-bg: rgba(15, 23, 42, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.06);
     --glass-border-hover: rgba(255, 255, 255, 0.15);
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -27,14 +27,14 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.75;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 
 a {
@@ -59,8 +59,8 @@ section {
     width: 100%;
     padding: 1.25rem 8%;
     background: rgba(8, 14, 26, 0.75); /* Glass effect */
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,6 +74,11 @@ section {
     font-weight: 700;
     font-family: var(--font-heading);
     letter-spacing: -0.5px;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
 .logo span {
@@ -232,8 +237,8 @@ section {
 }
 
 .btn-box:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.4);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 20px rgba(96, 165, 250, 0.5);
 }
 
 .btn-secondary {
@@ -257,7 +262,8 @@ section {
 }
 
 .resume-btn:hover {
-    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 8px 30px rgba(168, 85, 247, 0.5);
+    transform: translateY(-2px) scale(1.02);
 }
 
 /* Home Section */
@@ -444,7 +450,7 @@ section {
 .project-card:hover,
 .cert-card:hover,
 .skill-category:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.01);
     border-color: var(--glass-border-hover);
     background: rgba(30, 41, 59, 0.7);
 }
@@ -479,7 +485,7 @@ section {
 }
 
 .skill-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     padding: 0.4rem 0.8rem;
     border-radius: 0.5rem;
     font-size: 0.85rem;
@@ -638,8 +644,8 @@ section {
 .tech-tag {
     font-size: 0.75rem;
     color: var(--highlight-color);
-    background: rgba(45, 212, 191, 0.1);
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    background: rgba(45, 212, 191, 0.05);
+    border: 1px solid rgba(45, 212, 191, 0.15);
     padding: 0.2rem 0.6rem;
     border-radius: 1rem;
 }
@@ -914,6 +920,7 @@ section {
 }
 
 @media (max-width: 768px) {
+    section { padding: 5rem 6% 3rem; }
     .home-content h1 { font-size: 2.5rem; }
     .home-content h3 { font-size: 1.2rem; }
     .profile-box { width: 280px; height: 280px; }
@@ -983,7 +990,7 @@ section {
 }
 
 .domain-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.01);
     border-color: var(--glass-border-hover);
     background: rgba(30, 41, 59, 0.7);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
@@ -1224,7 +1231,7 @@ section {
 }
 
 .timeline-content:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.01);
     border-color: var(--glass-border-hover);
     background: rgba(15, 23, 42, 0.85); /* Slightly darker focus background for premium dark aesthetic */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -1464,8 +1471,8 @@ section {
 /* AI/ML tech tags — cyan tinted */
 .domain-ai-ml .tech-tag {
     color: #22d3ee;
-    background: rgba(34, 211, 238, 0.08);
-    border-color: rgba(34, 211, 238, 0.2);
+    background: rgba(34, 211, 238, 0.05);
+    border-color: rgba(34, 211, 238, 0.15);
 }
 
 /* AI/ML skill items — indigo border tint */
@@ -1485,11 +1492,11 @@ section {
 /* AI/ML timeline dots */
 .domain-ai-ml .timeline-dot {
     border-color: #818cf8;
-    box-shadow: 0 0 10px rgba(129, 140, 248, 0.4);
+    box-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
 }
 .domain-ai-ml .timeline-item:nth-child(even) .timeline-dot {
     border-color: #c084fc;
-    box-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
 }
 
 /* AI/ML timeline date badge */
@@ -1539,6 +1546,7 @@ section {
 .domain-fullstack .project-card,
 .domain-fullstack .skill-category {
     background: var(--domain-card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .domain-fullstack .experience-card::before,
@@ -1592,8 +1600,8 @@ section {
 /* Fullstack tech tags — emerald tinted */
 .domain-fullstack .tech-tag {
     color: #34d399;
-    background: rgba(52, 211, 153, 0.08);
-    border-color: rgba(52, 211, 153, 0.2);
+    background: rgba(52, 211, 153, 0.05);
+    border-color: rgba(52, 211, 153, 0.15);
 }
 
 /* Fullstack skill items — emerald border tint */
