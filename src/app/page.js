@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,6 +17,27 @@ import {
 } from './data/commonData';
 
 export default function Home() {
+  const roles = [
+    "Full-Stack Engineer",
+    "AI/ML Engineer",
+    "n8n Automation Engineer",
+    "Entrepreneur"
+  ];
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFading(true);
+      setTimeout(() => {
+        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        setIsFading(false);
+      }, 500); // matches fade transition speed
+    }, 3500); // rotates every 3.5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <Header />
@@ -24,7 +48,11 @@ export default function Home() {
           <div className="home-content">
             <h3>Hi, I&apos;m</h3>
             <h1>{personalInfo.name}</h1>
-            <h3><span className="text">{personalInfo.role}</span></h3>
+            <h3>
+              <span className={`text role-rotator ${isFading ? 'fade-out' : 'fade-in'}`}>
+                {roles[currentRoleIndex]}
+              </span>
+            </h3>
             <p>{personalInfo.bio}</p>
 
             <SocialLinks className="home-sci" />
@@ -37,7 +65,7 @@ export default function Home() {
 
           <div className="profile-container" role="img" aria-label={`Profile picture of ${personalInfo.name}`}>
             <div className="profile-box">
-              <Image src="/images/profile.JPG" alt={personalInfo.name} className="profile-pic" width={320} height={320} priority />
+              <Image src="/images/img.jpeg" alt={personalInfo.name} className="profile-pic" width={320} height={320} priority />
             </div>
           </div>
         </section>

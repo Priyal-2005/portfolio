@@ -8,7 +8,7 @@
 export const personalInfo = {
     name: "Priyal Sarda",
     role: "Full-Stack Engineer & AI Innovator",
-    bio: "I am a full-stack developer and entrepreneur with a proven track record of building scalable applications and launching successful ventures. I specialize in the MERN stack and Next.js, and I'm passionate about leveraging AI to create impactful solutions.",
+    bio: "I build end-to-end web products and design intelligent AI systems. Specialized in full-stack engineering, multi-agent LLM systems, and launching scalable digital prototypes.",
     email: "priyal.sarda2005@gmail.com",
     phone: "+91 93911 54230",
     location: "Delhi, India",
@@ -20,11 +20,11 @@ export const personalInfo = {
 
 /* ── Homepage About Section ── */
 export const homeAbout = {
-    subtitle: "Student Entrepreneur & AI Enthusiast",
+    subtitle: "Product Builder, Student Entrepreneur & AI Engineer",
     paragraphs: [
-        "I am passionate about Programming, AI, and solving real-life problems. I founded a startup that helps photographers and newlyweds, and I'm a TiE prototype competition winner who has explored idea validation through IIT & Wadhwani programs.",
-        "My AI project for loan prediction won me a Letter of Recommendation from Hewlett Packard Enterprise. I co-founded Coding Champs and taught Python to kids, becoming the youngest IIIT-H certified pedagogy teacher. I donated 50% of my teaching earnings to PM CARE FUND.",
-        "I enjoy participating in business and innovation competitions, including one by Tiger Global. Beyond tech, I love modelling and creative exploration!",
+        "My engineering journey is driven by a simple question: how can we translate code into tangible, real-world impact? I don't just write algorithms; I build products and launch startups. Whether creating a booking marketplace for local event photographers (PhotoDost) or winning a prototype competition at TiE Global, I thrive at the intersection of product engineering and entrepreneurship.",
+        "My passion for applied AI took shape during an intensive internship with Hewlett Packard Enterprise, where my machine learning model won the top prototype prize and earned me a personal letter of recommendation from HPE leadership. I love bringing high-agency energy to everything I do—from building multi-agent workflows with n8n to teaching programming concepts to children as the youngest certified pedagogy instructor at IIIT Hyderabad.",
+        "I'm constantly pushing the boundaries of what I can build—whether architecting scalable system designs or designing custom spatial RAG pipelines at nationwide GenAI hackathons. I thrive in fast-paced startup environments and high-performance teams where shipping clean, robust code solves real problems.",
     ],
 };
 
