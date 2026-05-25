@@ -1,8 +1,10 @@
+import Image from 'next/image';
+
 export default function ProjectCard({ project }) {
     return (
         <article className="project-card">
             <div className="project-image-container">
-                <img src={project.image} alt={`Screenshot of ${project.title}`} loading="lazy" />
+                <Image src={project.image} alt={`Screenshot of ${project.title}`} fill sizes="(max-width: 768px) 100vw, 50vw" />
                 {project.status && (
                     <span className="project-badge">{project.status}</span>
                 )}

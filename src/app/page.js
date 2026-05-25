@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './globals.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -37,7 +38,7 @@ export default function Home() {
 
           <div className="profile-container" role="img" aria-label={`Profile picture of ${personalInfo.name}`}>
             <div className="profile-box">
-              <img src="/images/profile.JPG" alt={personalInfo.name} className="profile-pic" />
+              <Image src="/images/profile.JPG" alt={personalInfo.name} className="profile-pic" width={320} height={320} priority />
             </div>
           </div>
         </section>
@@ -67,7 +68,7 @@ export default function Home() {
         {/* About Section */}
         <section className="about" id="about">
           <div className="about-img">
-            <img src="/images/profile.JPG" alt="About Priyal" />
+            <Image src="/images/profile.JPG" alt="About Priyal" width={350} height={400} />
           </div>
           <div className="about-text">
             <h2>About <span>Me</span></h2>
@@ -133,9 +134,9 @@ export default function Home() {
 
             <SocialLinks className="contact-socials" />
             
-            <div className="contact-resume-cta" style={{ marginTop: '2rem' }}>
+            <div className="contact-resume-cta">
               <a href={personalInfo.resumeUrl} className="btn-box resume-btn" download>
-                <i className='bx bxs-download' style={{ marginRight: '8px' }}></i> Download Resume
+                <i className='bx bxs-download'></i> Download Resume
               </a>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SectionHeading from '../components/SectionHeading';
@@ -73,10 +74,13 @@ export default function AiMlPage() {
                         aria-label={`Profile picture of ${personalInfo.name}`}
                     >
                         <div className="profile-box">
-                            <img
+                            <Image
                                 src="/images/profile.JPG"
                                 alt={personalInfo.name}
                                 className="profile-pic"
+                                width={320}
+                                height={320}
+                                priority
                             />
                         </div>
                     </div>
