@@ -1391,21 +1391,23 @@ section {
 
 /* ---- AI/ML Domain: Futuristic / Research / GenAI ---- */
 .domain-ai-ml {
-    --main-color: #818cf8;           /* Indigo 400 */
-    --accent-color: #c084fc;         /* Purple 400 */
-    --highlight-color: #22d3ee;      /* Cyan 400 */
+    --domain-primary: #818cf8;
+    --domain-accent: #c084fc;
+    --domain-highlight: #22d3ee;
     --domain-glow: rgba(129, 140, 248, 0.15);
     --domain-card-bg: rgba(129, 140, 248, 0.03);
+    
+    --main-color: var(--domain-primary);
+    --accent-color: var(--domain-accent);
+    --highlight-color: var(--domain-highlight);
 }
 
-/* AI/ML section backgrounds — faint purple wash */
 .domain-ai-ml .experience,
 .domain-ai-ml .projects,
 .domain-ai-ml .skills {
     background: linear-gradient(180deg, var(--bg-color) 0%, rgba(129, 140, 248, 0.02) 100%);
 }
 
-/* AI/ML cards — tinted background + always-visible top-bar at low opacity */
 .domain-ai-ml .experience-card,
 .domain-ai-ml .project-card,
 .domain-ai-ml .skill-category {
@@ -1415,7 +1417,7 @@ section {
 .domain-ai-ml .experience-card::before,
 .domain-ai-ml .project-card::before,
 .domain-ai-ml .skill-category::before {
-    background: linear-gradient(90deg, #818cf8, #c084fc);
+    background: linear-gradient(90deg, var(--domain-primary), var(--domain-accent));
     opacity: 0.4;
 }
 
@@ -1425,7 +1427,6 @@ section {
     opacity: 1;
 }
 
-/* AI/ML card hover — purple haze glow */
 .domain-ai-ml .experience-card:hover,
 .domain-ai-ml .project-card:hover,
 .domain-ai-ml .skill-category:hover {
@@ -1434,114 +1435,85 @@ section {
     background: rgba(129, 140, 248, 0.06);
 }
 
-/* AI/ML experience card left-border */
-.domain-ai-ml .experience-card {
-    border-left-color: rgba(129, 140, 248, 0.2);
-}
-.domain-ai-ml .experience-card:hover {
-    border-left-color: #818cf8;
-}
+.domain-ai-ml .experience-card { border-left-color: rgba(129, 140, 248, 0.2); }
+.domain-ai-ml .experience-card:hover { border-left-color: var(--domain-primary); }
 
-/* AI/ML resume button */
-.domain-ai-ml .resume-btn {
-    background: linear-gradient(135deg, #818cf8, #c084fc);
-}
-.domain-ai-ml .resume-btn:hover {
-    box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4);
-}
+.domain-ai-ml .resume-btn { background: linear-gradient(135deg, var(--domain-primary), var(--domain-accent)); }
+.domain-ai-ml .resume-btn:hover { box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4); }
+.domain-ai-ml .btn-box:hover { box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4); }
 
-/* AI/ML primary button hover */
-.domain-ai-ml .btn-box:hover {
-    box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
-}
-
-/* AI/ML section heading gradient */
 .domain-ai-ml .section-heading span {
-    background: linear-gradient(135deg, #818cf8, #c084fc);
+    background: linear-gradient(135deg, var(--domain-primary), var(--domain-accent));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* AI/ML profile border gradient */
-.domain-ai-ml .profile-box {
-    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-}
+.domain-ai-ml .profile-box { background: linear-gradient(135deg, var(--domain-primary) 0%, var(--domain-accent) 100%); }
 
-/* AI/ML tech tags — cyan tinted */
 .domain-ai-ml .tech-tag {
-    color: #22d3ee;
+    color: var(--domain-highlight);
     background: rgba(34, 211, 238, 0.05);
     border-color: rgba(34, 211, 238, 0.15);
 }
 
-/* AI/ML skill items — indigo border tint */
-.domain-ai-ml .skill-item {
-    border-color: rgba(129, 140, 248, 0.15);
-}
+.domain-ai-ml .skill-item { border-color: rgba(129, 140, 248, 0.15); }
 .domain-ai-ml .skill-item:hover {
-    border-color: #818cf8;
-    color: #818cf8;
+    border-color: var(--domain-primary);
+    color: var(--domain-primary);
 }
 
-/* AI/ML timeline line gradient */
-.domain-ai-ml .timeline-line {
-    background: linear-gradient(to bottom, #818cf8, #c084fc);
-}
+.domain-ai-ml .timeline-line { background: linear-gradient(to bottom, var(--domain-primary), var(--domain-accent)); }
 
-/* AI/ML timeline dots */
 .domain-ai-ml .timeline-dot {
-    border-color: #818cf8;
+    border-color: var(--domain-primary);
     box-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
 }
 .domain-ai-ml .timeline-item:nth-child(even) .timeline-dot {
-    border-color: #c084fc;
+    border-color: var(--domain-accent);
     box-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
 }
 
-/* AI/ML timeline date badge */
 .domain-ai-ml .timeline-date {
-    color: #22d3ee;
+    color: var(--domain-highlight);
     background: rgba(34, 211, 238, 0.08);
     border-color: rgba(34, 211, 238, 0.15);
 }
 
-/* AI/ML timeline category badge */
 .domain-ai-ml .timeline-category-badge {
-    color: #818cf8;
+    color: var(--domain-primary);
     background: rgba(129, 140, 248, 0.08);
     border-color: rgba(129, 140, 248, 0.15);
 }
 .domain-ai-ml .timeline-item:nth-child(even) .timeline-category-badge {
-    color: #c084fc;
+    color: var(--domain-accent);
     background: rgba(192, 132, 252, 0.08);
     border-color: rgba(192, 132, 252, 0.15);
 }
 
-/* AI/ML experience date badge */
 .domain-ai-ml .experience-date {
-    color: #22d3ee;
+    color: var(--domain-highlight);
     background: rgba(34, 211, 238, 0.06);
 }
 
-/* AI/ML project badge */
 .domain-ai-ml .project-badge {
-    color: #c084fc;
+    color: var(--domain-accent);
     border-color: rgba(192, 132, 252, 0.3);
 }
 
 /* ---- Fullstack Domain: SaaS / Product / Engineering ---- */
 .domain-fullstack {
-    --main-color: #60a5fa;           /* Blue 400 */
-    --accent-color: #34d399;         /* Emerald 400 */
-    --highlight-color: #34d399;      /* Emerald 400 */
+    --domain-primary: #60a5fa;
+    --domain-accent: #34d399;
+    --domain-highlight: #34d399;
     --domain-glow: rgba(52, 211, 153, 0.08);
     --domain-card-bg: rgba(15, 23, 42, 0.6);
+    
+    --main-color: var(--domain-primary);
+    --accent-color: var(--domain-accent);
+    --highlight-color: var(--domain-highlight);
 }
 
-/* Fullstack sections — stays neutral slate, no wash */
-
-/* Fullstack cards — clean flat glass background */
 .domain-fullstack .experience-card,
 .domain-fullstack .project-card,
 .domain-fullstack .skill-category {
@@ -1552,10 +1524,9 @@ section {
 .domain-fullstack .experience-card::before,
 .domain-fullstack .project-card::before,
 .domain-fullstack .skill-category::before {
-    background: linear-gradient(90deg, #60a5fa, #34d399);
+    background: linear-gradient(90deg, var(--domain-primary), var(--domain-accent));
 }
 
-/* Fullstack card hover — clean depth shadows */
 .domain-fullstack .experience-card:hover,
 .domain-fullstack .project-card:hover,
 .domain-fullstack .skill-category:hover {
@@ -1563,59 +1534,36 @@ section {
                 0 0 0 1px rgba(52, 211, 153, 0.06);
 }
 
-/* Fullstack experience card left-border */
-.domain-fullstack .experience-card {
-    border-left-color: rgba(52, 211, 153, 0.15);
-}
-.domain-fullstack .experience-card:hover {
-    border-left-color: #34d399;
-}
+.domain-fullstack .experience-card { border-left-color: rgba(52, 211, 153, 0.15); }
+.domain-fullstack .experience-card:hover { border-left-color: var(--domain-accent); }
 
-/* Fullstack resume button */
-.domain-fullstack .resume-btn {
-    background: linear-gradient(135deg, #60a5fa, #34d399);
-}
-.domain-fullstack .resume-btn:hover {
-    box-shadow: 0 8px 25px rgba(52, 211, 153, 0.35);
-}
+.domain-fullstack .resume-btn { background: linear-gradient(135deg, var(--domain-primary), var(--domain-accent)); }
+.domain-fullstack .resume-btn:hover { box-shadow: 0 8px 25px rgba(52, 211, 153, 0.35); }
+.domain-fullstack .btn-box:hover { box-shadow: 0 4px 15px rgba(96, 165, 250, 0.35); }
 
-/* Fullstack primary button hover */
-.domain-fullstack .btn-box:hover {
-    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.35);
-}
-
-/* Fullstack section heading gradient */
 .domain-fullstack .section-heading span {
-    background: linear-gradient(135deg, #60a5fa, #34d399);
+    background: linear-gradient(135deg, var(--domain-primary), var(--domain-accent));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Fullstack profile border gradient */
-.domain-fullstack .profile-box {
-    background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
-}
+.domain-fullstack .profile-box { background: linear-gradient(135deg, var(--domain-primary) 0%, var(--domain-accent) 100%); }
 
-/* Fullstack tech tags — emerald tinted */
 .domain-fullstack .tech-tag {
-    color: #34d399;
+    color: var(--domain-highlight);
     background: rgba(52, 211, 153, 0.05);
     border-color: rgba(52, 211, 153, 0.15);
 }
 
-/* Fullstack skill items — emerald border tint */
-.domain-fullstack .skill-item {
-    border-color: rgba(52, 211, 153, 0.1);
-}
+.domain-fullstack .skill-item { border-color: rgba(52, 211, 153, 0.1); }
 .domain-fullstack .skill-item:hover {
-    border-color: #34d399;
-    color: #34d399;
+    border-color: var(--domain-highlight);
+    color: var(--domain-highlight);
 }
 
-/* Fullstack project badge */
 .domain-fullstack .project-badge {
-    color: #34d399;
+    color: var(--domain-highlight);
     border-color: rgba(52, 211, 153, 0.3);
 }
 

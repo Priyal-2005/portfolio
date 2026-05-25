@@ -13,7 +13,7 @@ export const aiMlExperience = [
     {
         role: "n8n Automation Engineer",
         company: "Mavence",
-        date: "2023 - Present",
+        date: "Jan 2024 - Present",
         bullets: [
             "Architected and deployed enterprise-grade automated workflows utilizing n8n to integrate heterogeneous SaaS APIs, relational databases, and AI nodes.",
             "Designed and embedded custom LLM agents and multi-agent systems using advanced prompting, prompt chaining, and memory stores to automate business processes.",
@@ -84,7 +84,7 @@ export const aiMlCertifications = [
     {
         title: "Economic Times GenAI Hackathon Runner-Up",
         issuer: "The Economic Times",
-        date: "2023",
+        date: "Oct 2023",
         description: "Recognized as a runner-up in an intense, nationwide hackathon developing multi-agent Generative AI tools.",
         link: "#",
         category: "GenAI / Hackathon",
@@ -116,7 +116,7 @@ export const aiMlCertifications = [
     {
         title: "Deep Learning Specialization",
         issuer: "deeplearning.ai",
-        date: "2023",
+        date: "Mar 2023",
         description: "Completed 5-course specialization in neural networks, parameter tuning, CNNs, RNNs, and Sequence Models.",
         link: "#",
         category: "Deep Learning",

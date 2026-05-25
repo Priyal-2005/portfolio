@@ -13,7 +13,7 @@ export const fullstackExperience = [
     {
         role: "Frontend Developer (React.js)",
         company: "Blue Planet Solutions",
-        date: "2023 - Present",
+        date: "Aug 2023 - Present",
         bullets: [
             "Engineered responsive, component-driven user interfaces using React.js and modern state management tools (Redux/Context API).",
             "Optimized frontend bundle sizes and rendering cycles, achieving a 25% improvement in PageSpeed Insights and Core Web Vitals (LCP, INP).",
@@ -25,7 +25,7 @@ export const fullstackExperience = [
     {
         role: "Co-Founder & Technical Lead",
         company: "Coding Champs",
-        date: "2023 - Present",
+        date: "Jan 2023 - Present",
         bullets: [
             "Architected and delivered internal operational tools and admin dashboards using Next.js, React.js, and MongoDB to manage 500+ active students globally.",
             "Automated administrative and tracking workflows, reducing operational overhead and enhancing class scheduling precision.",
@@ -36,7 +36,7 @@ export const fullstackExperience = [
     {
         role: "Founder & Full-Stack Developer",
         company: "PhotoDost",
-        date: "2022 - Present",
+        date: "Jan 2022 - Present",
         bullets: [
             "Designed, developed, and deployed an end-to-end photography booking marketplace using the MERN stack (MongoDB, Express, React, Node.js).",
             "Implemented secure JWT user/photographer authentication, dynamic profile galleries, and a multi-step booking request/approval pipeline.",
