@@ -28,10 +28,10 @@ export const fullstackExperience = [
         date: "2023 - Present",
         bullets: [
             "Architected and delivered internal operational tools and admin dashboards using Next.js, React.js, and MongoDB to manage 500+ active students globally.",
-            "Automated administrative and tracking workflows, reducing operational overhead by 40% and enhancing class scheduling precision.",
+            "Automated administrative and tracking workflows, reducing operational overhead and enhancing class scheduling precision.",
             "Led a small engineering and support team of 5, defining standard git workflows and reviews to ensure clean codebase maintainability."
         ],
-        techStack: ["Next.js", "React.js", "Node.js", "MongoDB", "Tailwind CSS", "Git & GitHub"],
+        techStack: ["Next.js", "React.js", "Node.js", "MongoDB", "CSS Modules", "Git & GitHub"],
     },
     {
         role: "Founder & Full-Stack Developer",
@@ -50,7 +50,7 @@ export const fullstackProjects = [
     {
         title: "FreelanceFlow",
         description: "A comprehensive SaaS platform helping freelancers manage contracts, track hours, and generate custom invoices instantly.",
-        techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
+        techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "CSS Modules"],
         problem: "Freelancers lacked a unified, non-bloated client dashboard to manage contracts, track active project hours, and generate custom invoices instantly.",
         solution: "Developed an end-to-end freelance management application featuring automated invoice generation, real-time visual client progress pipelines, and database search.",
         impact: "Enabled streamlined tracking of multiple parallel client relationships with high UI responsiveness.",
@@ -89,7 +89,7 @@ export const fullstackProjects = [
         techStack: ["Next.js", "CSS Modules", "JavaScript", "HTML5", "CSS3"],
         problem: "Borrowers struggled to understand the structural amortization differences between flat and reducing interest schedules over time.",
         solution: "Created a dynamic Next.js calculation workspace that processes loan principals, interest schedules, and generates clean amortization charts.",
-        impact: "Shipped a clean client-side utility with 100% calculation accuracy and interactive visualizations.",
+        impact: "Shipped a clean client-side utility with interactive visualizations and intuitive input handling.",
         image: "/images/bmi-calculator.jpg",
         status: "Work in Progress",
         repo: "https://github.com/Priyal-2005/Loan-Calculator-App",
@@ -120,9 +120,9 @@ export const fullstackProjects = [
 ];
 
 export const fullstackSkills = {
-    Frontend: ["React.js", "Next.js", "Redux", "Context API", "Tailwind CSS", "Bootstrap", "HTML5", "CSS3", "CSS Modules"],
+    Frontend: ["React.js", "Next.js", "Redux", "Context API", "Bootstrap", "HTML5", "CSS3", "CSS Modules"],
     Backend: ["Node.js", "Express.js", "REST APIs", "FastAPI", "Django"],
     Databases: ["MongoDB", "MySQL", "PostgreSQL", "Firebase"],
     "APIs & Auth": ["JWT (JSON Web Tokens)", "Prisma (ORM)", "REST API Design", "Postman", "API Integration"],
-    Tools: ["Git & GitHub", "VS Code", "Figma", "Vercel", "Docker"],
+    Tools: ["Git & GitHub", "VS Code", "Figma", "Vercel"],
 };

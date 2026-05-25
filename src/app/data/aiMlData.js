@@ -6,7 +6,7 @@
 
 export const aiMlHero = {
     role: "AI / ML Engineer",
-    bio: "I design and build intelligent systems — specializing in LLM applications, multi-agent frameworks, retrieval-augmented generation (RAG), and custom NLP/CV pipelines. Passionate about developing scalable, recruiter-ready, and high-impact AI solutions.",
+    bio: "I design and build intelligent systems — specializing in LLM applications, multi-agent frameworks, retrieval-augmented generation (RAG), and custom NLP/CV pipelines. Passionate about developing scalable, high-impact AI solutions.",
 };
 
 export const aiMlExperience = [
@@ -18,7 +18,7 @@ export const aiMlExperience = [
             "Architected and deployed enterprise-grade automated workflows utilizing n8n to integrate heterogeneous SaaS APIs, relational databases, and AI nodes.",
             "Designed and embedded custom LLM agents and multi-agent systems using advanced prompting, prompt chaining, and memory stores to automate business processes.",
             "Built robust Retrieval-Augmented Generation (RAG) pipelines within automated workflows to handle dynamic knowledge queries with low latency.",
-            "Optimized pipeline execution flows and error handling mechanisms, increasing process automation efficiency and reducing manual operations by over 40%."
+            "Optimized pipeline execution flows and error handling mechanisms, significantly reducing manual operations and increasing process automation efficiency."
         ],
         techStack: ["n8n", "LLM Agents", "RAG", "Python", "API Integration", "Workflows"],
     },
@@ -43,7 +43,7 @@ export const aiMlProjects = [
         techStack: ["Python", "LangGraph", "FastAPI", "Spatial RAG", "PyTorch", "LLMs"],
         problem: "Emergency response dispatchers and field personnel lacked consolidated, real-time spatial intelligence and dynamic team coordination during natural disasters, resulting in critical response delays.",
         solution: "Built a highly responsive multi-agent coordination network with LangGraph that ingests live multi-source emergency reports, performs spatial semantic analysis (RAG), and dynamically schedules rescue priorities.",
-        impact: "Accelerated critical decision-making and routing times by 50% in simulation tests, establishing highly accurate spatial impact grids for emergency responders.",
+        impact: "Demonstrated faster decision-making and routing in simulation tests, generating accurate spatial impact grids for emergency responders.",
         image: "/images/Weather-app.jpg",
         repo: "https://github.com/Priyal-2005/CrisisGrid-AI",
         live: "https://crisisgrid-ai.vercel.app/",
@@ -54,7 +54,7 @@ export const aiMlProjects = [
         techStack: ["Next.js", "FastAPI", "Hugging Face", "LLMs", "NLP", "Python"],
         problem: "Recruiters faced enormous backlogs of technical candidate profiles, spending hundreds of hours manually screening resumes with poor matching accuracy for highly specialized technical roles.",
         solution: "Developed an automated pipeline using fine-tuned NLP models and advanced embeddings to parse, extract, and index deep developer profiles. Built an LLM reasoning engine to rank candidate skills against complex role descriptions.",
-        impact: "Successfully reduced candidates' initial screening and vetting lifecycle by 75% while boosting technical match accuracy to 90%.",
+        impact: "Significantly reduced candidates' initial screening time while improving technical match quality against role-specific criteria.",
         image: "/images/NotesApp.jpg",
         repo: "https://github.com/Priyal-2005/Talynx",
         live: "https://talynx-hiring.vercel.app/",
@@ -127,6 +127,6 @@ export const aiMlSkills = {
     "AI/ML": ["Python", "TensorFlow", "PyTorch", "scikit-learn", "NLP", "Computer Vision", "Deep Learning", "Supervised Learning"],
     "GenAI": ["LangGraph", "RAG", "LangChain", "Hugging Face", "LLMs (Gemini, GPT)", "Prompt Engineering", "Multi-Agent Systems", "Embeddings"],
     "Backend": ["FastAPI", "Node.js", "Express.js", "REST APIs", "API Design"],
-    "Frontend": ["React.js", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "Responsive UI"],
-    "Tools & Platforms": ["MongoDB", "Git & GitHub", "Vercel", "Google Colab", "Jupyter", "Docker", "Postman"],
+    "Frontend": ["React.js", "Next.js", "HTML5", "CSS3", "Responsive UI"],
+    "Tools & Platforms": ["MongoDB", "Git & GitHub", "Vercel", "Google Colab", "Jupyter", "Postman"],
 };

@@ -1297,26 +1297,65 @@ section {
 
 /* =============================================================================
    DOMAIN THEMING SYSTEM
-   Scoped CSS variable overrides. All child components automatically inherit
-   the domain palette via --main-color, --accent-color, --highlight-color.
+   Scoped CSS variable overrides + deeper visual differentiation.
+   All child components inherit via --main-color, --accent-color, --highlight-color.
+   Additional scoped vars: --domain-glow, --domain-card-bg.
    ============================================================================= */
 
 /* ---- AI/ML Domain: Futuristic / Research / GenAI ---- */
 .domain-ai-ml {
-    --main-color: #818cf8;       /* Indigo 400 — futuristic intelligence */
-    --accent-color: #c084fc;     /* Purple 400 — GenAI experimental */
-    --highlight-color: #22d3ee;  /* Cyan 400 — neural accent */
+    --main-color: #818cf8;           /* Indigo 400 */
+    --accent-color: #c084fc;         /* Purple 400 */
+    --highlight-color: #22d3ee;      /* Cyan 400 */
+    --domain-glow: rgba(129, 140, 248, 0.15);
+    --domain-card-bg: rgba(129, 140, 248, 0.03);
 }
 
-/* Glow-style card hover for AI/ML: subtle purple haze */
+/* AI/ML section backgrounds — faint purple wash */
+.domain-ai-ml .experience,
+.domain-ai-ml .projects,
+.domain-ai-ml .skills {
+    background: linear-gradient(180deg, var(--bg-color) 0%, rgba(129, 140, 248, 0.02) 100%);
+}
+
+/* AI/ML cards — tinted background + always-visible top-bar at low opacity */
+.domain-ai-ml .experience-card,
+.domain-ai-ml .project-card,
+.domain-ai-ml .skill-category {
+    background: var(--domain-card-bg);
+}
+
+.domain-ai-ml .experience-card::before,
+.domain-ai-ml .project-card::before,
+.domain-ai-ml .skill-category::before {
+    background: linear-gradient(90deg, #818cf8, #c084fc);
+    opacity: 0.4;
+}
+
+.domain-ai-ml .experience-card:hover::before,
+.domain-ai-ml .project-card:hover::before,
+.domain-ai-ml .skill-category:hover::before {
+    opacity: 1;
+}
+
+/* AI/ML card hover — purple haze glow */
 .domain-ai-ml .experience-card:hover,
 .domain-ai-ml .project-card:hover,
 .domain-ai-ml .skill-category:hover {
-    box-shadow: 0 8px 30px rgba(129, 140, 248, 0.12),
+    box-shadow: 0 8px 30px var(--domain-glow),
                 0 0 0 1px rgba(192, 132, 252, 0.08);
+    background: rgba(129, 140, 248, 0.06);
 }
 
-/* AI/ML resume button gradient */
+/* AI/ML experience card left-border */
+.domain-ai-ml .experience-card {
+    border-left-color: rgba(129, 140, 248, 0.2);
+}
+.domain-ai-ml .experience-card:hover {
+    border-left-color: #818cf8;
+}
+
+/* AI/ML resume button */
 .domain-ai-ml .resume-btn {
     background: linear-gradient(135deg, #818cf8, #c084fc);
 }
@@ -1324,7 +1363,7 @@ section {
     box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4);
 }
 
-/* AI/ML primary button hover glow */
+/* AI/ML primary button hover */
 .domain-ai-ml .btn-box:hover {
     box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
 }
@@ -1342,14 +1381,17 @@ section {
     background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
 }
 
-/* AI/ML tech tag tint */
+/* AI/ML tech tags — cyan tinted */
 .domain-ai-ml .tech-tag {
     color: #22d3ee;
     background: rgba(34, 211, 238, 0.08);
     border-color: rgba(34, 211, 238, 0.2);
 }
 
-/* AI/ML skill item hover */
+/* AI/ML skill items — indigo border tint */
+.domain-ai-ml .skill-item {
+    border-color: rgba(129, 140, 248, 0.15);
+}
 .domain-ai-ml .skill-item:hover {
     border-color: #818cf8;
     color: #818cf8;
@@ -1389,14 +1431,43 @@ section {
     border-color: rgba(192, 132, 252, 0.15);
 }
 
-/* ---- Fullstack Domain: SaaS / Product / Engineering ---- */
-.domain-fullstack {
-    --main-color: #60a5fa;       /* Blue 400 — solid engineering */
-    --accent-color: #34d399;     /* Emerald 400 — product growth */
-    --highlight-color: #34d399;  /* Emerald 400 — consistent system accent */
+/* AI/ML experience date badge */
+.domain-ai-ml .experience-date {
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.06);
 }
 
-/* Structured card hover for Fullstack: clean depth shadows */
+/* AI/ML project badge */
+.domain-ai-ml .project-badge {
+    color: #c084fc;
+    border-color: rgba(192, 132, 252, 0.3);
+}
+
+/* ---- Fullstack Domain: SaaS / Product / Engineering ---- */
+.domain-fullstack {
+    --main-color: #60a5fa;           /* Blue 400 */
+    --accent-color: #34d399;         /* Emerald 400 */
+    --highlight-color: #34d399;      /* Emerald 400 */
+    --domain-glow: rgba(52, 211, 153, 0.08);
+    --domain-card-bg: rgba(15, 23, 42, 0.6);
+}
+
+/* Fullstack sections — stays neutral slate, no wash */
+
+/* Fullstack cards — clean flat glass background */
+.domain-fullstack .experience-card,
+.domain-fullstack .project-card,
+.domain-fullstack .skill-category {
+    background: var(--domain-card-bg);
+}
+
+.domain-fullstack .experience-card::before,
+.domain-fullstack .project-card::before,
+.domain-fullstack .skill-category::before {
+    background: linear-gradient(90deg, #60a5fa, #34d399);
+}
+
+/* Fullstack card hover — clean depth shadows */
 .domain-fullstack .experience-card:hover,
 .domain-fullstack .project-card:hover,
 .domain-fullstack .skill-category:hover {
@@ -1404,7 +1475,15 @@ section {
                 0 0 0 1px rgba(52, 211, 153, 0.06);
 }
 
-/* Fullstack resume button gradient */
+/* Fullstack experience card left-border */
+.domain-fullstack .experience-card {
+    border-left-color: rgba(52, 211, 153, 0.15);
+}
+.domain-fullstack .experience-card:hover {
+    border-left-color: #34d399;
+}
+
+/* Fullstack resume button */
 .domain-fullstack .resume-btn {
     background: linear-gradient(135deg, #60a5fa, #34d399);
 }
@@ -1430,33 +1509,30 @@ section {
     background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
 }
 
-/* Fullstack tech tag tint */
+/* Fullstack tech tags — emerald tinted */
 .domain-fullstack .tech-tag {
     color: #34d399;
     background: rgba(52, 211, 153, 0.08);
     border-color: rgba(52, 211, 153, 0.2);
 }
 
-/* Fullstack skill item hover */
+/* Fullstack skill items — emerald border tint */
+.domain-fullstack .skill-item {
+    border-color: rgba(52, 211, 153, 0.1);
+}
 .domain-fullstack .skill-item:hover {
     border-color: #34d399;
     color: #34d399;
 }
 
-/* Fullstack experience card left-border accent on hover */
-.domain-fullstack .experience-card:hover {
-    border-left-color: #34d399;
-}
-
-/* Fullstack project badge tint */
+/* Fullstack project badge */
 .domain-fullstack .project-badge {
     color: #34d399;
     border-color: rgba(52, 211, 153, 0.3);
 }
 
-/* Fullstack card hover top-bar gradient */
-.domain-fullstack .experience-card:hover::before,
-.domain-fullstack .project-card:hover::before,
-.domain-fullstack .skill-category:hover::before {
-    background: linear-gradient(90deg, #60a5fa, #34d399);
+/* Fullstack experience date badge */
+.domain-fullstack .experience-date {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.06);
 }

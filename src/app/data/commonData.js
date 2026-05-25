@@ -31,7 +31,7 @@ export const homeAbout = {
 /* ── Homepage Unified Skills ── */
 export const homeSkills = {
     Languages: ["JavaScript (ES6+)", "Python", "Java", "C++", "HTML5", "CSS3"],
-    Frontend: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Bootstrap"],
+    Frontend: ["React.js", "Next.js", "Redux", "Bootstrap"],
     Backend: ["Node.js", "Express.js", "Django", "FastAPI"],
     "AI / ML": ["TensorFlow", "PyTorch", "LangChain", "NLP", "Computer Vision"],
     Databases: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
