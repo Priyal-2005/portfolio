@@ -45,6 +45,7 @@ export const dataAnalystProjects = [
     },
     {
         title: "Olist Customer Churn Analysis",
+        image: "/images/projects/olist-churn.jpg",
         contextNote: "Team project (Apr 2026).",
         description: "Churn and retention analysis of 99K+ orders from a Brazilian e-commerce marketplace, with a Tableau Public dashboard.",
         techStack: ["Python", "Pandas", "Seaborn", "Jupyter", "Tableau Public"],
@@ -56,6 +57,7 @@ export const dataAnalystProjects = [
     },
     {
         title: "Cookie Cats A/B Test: Player Retention",
+        image: "/images/projects/cookie-cats.jpg",
         contextNote: "AI-assisted project (Oct 2026).",
         description: "An A/B test of moving a mobile puzzle game's first progression gate from level 30 to level 40, measured on 90K players.",
         techStack: ["SQL", "SQLite", "Python", "Pandas", "Claude Code", "Tableau Public"],

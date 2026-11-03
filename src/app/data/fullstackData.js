@@ -57,6 +57,7 @@ export const fullstackProjects = [
     },
     {
         title: "LibraNet",
+        image: "/images/projects/libranet.jpg",
         contextNote: "Distributed library management system, team project (Apr 2026).",
         description: "A distributed multi-branch library platform built with DDD, RBAC, and event-driven reservation workflows.",
         techStack: ["Next.js", "Node.js", "Express.js", "TypeScript", "MongoDB", "Redis", "DDD", "RBAC"],

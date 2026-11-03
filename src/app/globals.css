@@ -1711,3 +1711,35 @@ section {
     font-size: 1.4rem;
     color: var(--text-color, #cbd5e1);
 }
+
+/* Project screenshot */
+.project-image {
+    margin-bottom: 1.5rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    aspect-ratio: 16 / 9;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* Phone: stack hero buttons so labels don't wrap */
+@media (max-width: 480px) {
+    .btn-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-group .btn-box {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+    }
+}

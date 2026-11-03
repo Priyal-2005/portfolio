@@ -1,6 +1,19 @@
+import Image from 'next/image';
+
 export default function ProjectCard({ project }) {
     return (
         <article className="project-card">
+            {project.image && (
+                <div className="project-image">
+                    <Image
+                        src={project.image}
+                        alt={`Screenshot of ${project.title}`}
+                        width={1100}
+                        height={620}
+                        sizes="(max-width: 768px) 100vw, 560px"
+                    />
+                </div>
+            )}
             <div className="project-info">
                 <div className="project-header">
                     <h3 className="project-title">{project.title}</h3>
