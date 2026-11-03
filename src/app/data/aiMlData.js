@@ -75,6 +75,14 @@ export const aiMlCertifications = [
         category: "Applied AI / Prototype",
     },
     {
+        title: "Introduction to Artificial Intelligence",
+        issuer: "Nanyang Technological University, Singapore",
+        date: "Aug 2022",
+        description: "Completed AI coursework covering search algorithms, machine learning models, and neural networks.",
+        link: "https://drive.google.com/file/d/1QJ_fyFe5PADkdbxCeCoq9BNKyigEMOQp/view?usp=sharing",
+        category: "AI/ML Coursework",
+    },
+    {
         title: "Applied Deep Learning & Computer Vision",
         issuer: "IIT Madras (Mechanica) & EduxLabs",
         date: "Jul 2022",

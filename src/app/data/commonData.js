@@ -109,13 +109,6 @@ export const homeCertifications = [
         description: "Structured entrepreneurship curriculum and venture planning.",
         link: "https://drive.google.com/file/d/1gRKhINkr2JhvQ44vQXY7CbI3g6eHfoEQ/view?usp=sharing",
     },
-    {
-        title: "HPE Letter of Recommendation",
-        issuer: "Hewlett Packard Enterprise",
-        date: "October 2022",
-        description: "Outstanding performance in Azure-based ML, NLP, and CV projects.",
-        link: "https://drive.google.com/file/d/1Ia_47xYRQg2q1-NYcg16HbX9dxIqwlNd/view?usp=sharing",
-    },
 ];
 
 /**
