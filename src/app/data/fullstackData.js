@@ -6,7 +6,7 @@
 
 export const fullstackHero = {
     role: "AI Full-Stack Engineer",
-    bio: "AI Full-Stack Engineer with 2 years of experience (including 6 months in industry), specializing in LLMs, RAG, and multi-agent systems using Next.js, FastAPI, Node.js, and MongoDB. I build autonomous AI applications, workflow automations, and production-ready full-stack systems.",
+    bio: "AI Full-Stack Engineer with 3 years of hands-on experience (including 11 months in industry internships), specializing in LLMs, RAG, and multi-agent systems using Next.js, FastAPI, Node.js, and MongoDB. I build autonomous AI applications, workflow automations, and production-ready full-stack systems.",
     resumeUrl: "/resume-fullstack.pdf",
 };
 

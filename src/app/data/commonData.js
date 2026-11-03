@@ -59,6 +59,14 @@ export const homeJourney = [
         category: "Product",
         description: "CVs and interviews overlook key soft skills like resilience, curiosity, and diligence. This solution identifies top talent by accurately assessing these traits.",
     },
+    {
+        title: "AI Intern (AIYA Program)",
+        issuer: "Nanyang Technological University + Hewlett Packard Enterprise",
+        date: "Jul 2022 – Oct 2022",
+        category: "AI / ML",
+        description: "Where the AI journey began: built a supervised-learning loan prediction prototype and trained deep learning and computer vision models, earning a Letter of Recommendation from HPE for Azure-based ML, NLP, and CV projects.",
+        link: "https://drive.google.com/file/d/1ip90MEjix5103m7aKQ_7lTmvNAlXKyMe/view?usp=sharing",
+    },
 ];
 
 /* ── Homepage Unified Skills ── */

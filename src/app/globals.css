@@ -1703,3 +1703,11 @@ section {
     color: #fb923c;
     background: rgba(251, 146, 60, 0.06);
 }
+
+/* Contact form status message */
+.form-status {
+    min-height: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-color, #cbd5e1);
+}

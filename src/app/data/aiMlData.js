@@ -7,7 +7,7 @@
 export const aiMlHero = {
     role: "AI / ML Engineer",
     resumeUrl: "/resume-ai-ml.pdf",
-    bio: "AI/ML Engineer with 4+ years of experience in Generative AI, LLMs, RAG, and multi-agent systems, including 11 months of industry experience. I build AI applications, optimize prompts, automate workflows, and ship production-ready AI systems using Python, LangGraph, FastAPI, and modern LLM frameworks.",
+    bio: "AI/ML Engineer with 4+ years of hands-on experience (since 2022) in Generative AI, LLMs, RAG, and multi-agent systems, including 11 months in industry internships. I build AI applications, optimize prompts, automate workflows, and ship production-ready AI systems using Python, LangGraph, FastAPI, and modern LLM frameworks.",
 };
 
 export const aiMlExperience = [

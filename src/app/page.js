@@ -9,6 +9,7 @@ import CertificationCard from './components/CertificationCard';
 import SectionHeading from './components/SectionHeading';
 import SocialLinks from './components/SocialLinks';
 import TimelineItem from './components/TimelineItem';
+import ContactForm from './components/ContactForm';
 import {
   personalInfo,
   homeAbout,
@@ -183,18 +184,7 @@ export default function Home() {
           </div>
 
           <div className="contact-form-container">
-            <form className="contact-form" aria-label="Contact Form">
-              <div className="input-box">
-                <input type="text" placeholder="Full Name" required aria-label="Full Name" />
-                <input type="email" placeholder="Email Address" required aria-label="Email Address" />
-              </div>
-              <div className="input-box">
-                <input type="tel" placeholder="Mobile Number" aria-label="Mobile Number" />
-                <input type="text" placeholder="Email Subject" aria-label="Email Subject" />
-              </div>
-              <textarea cols="30" rows="10" placeholder="Your Message" required aria-label="Your Message"></textarea>
-              <button type="submit" className="btn-box form-btn">Send Message</button>
-            </form>
+            <ContactForm />
           </div>
         </section>
       </main>

@@ -5,7 +5,7 @@
 
 export const dataAnalystHero = {
     role: "Data Analyst",
-    bio: "Data-driven AI/ML Engineer with 3 years of experience (11 months in industry) who turns messy data into clear business insights. Strong in data cleaning, exploratory analysis (EDA), KPI pivots, and Tableau dashboards using Python, SQL, and Google Sheets, with AI-assisted workflows that are always checked by hand.",
+    bio: "Data-driven AI/ML Engineer with 3 years of hands-on experience (11 months in industry internships) who turns messy data into clear business insights. Strong in data cleaning, exploratory analysis (EDA), KPI pivots, and Tableau dashboards using Python, SQL, and Google Sheets, with AI-assisted workflows that are always checked by hand.",
     resumeUrl: "/resume-data-analyst.pdf",
 };
 
