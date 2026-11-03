@@ -120,10 +120,10 @@ export const domains = [
         id: "ai-ml",
         title: "AI / ML Engineer",
         description:
-            "Machine learning models, NLP pipelines, and intelligent systems. Exploring the frontier of applied AI.",
+            "LLM applications, RAG pipelines, and multi-agent systems built with LangGraph and LangChain.",
         href: "/ai-ml",
         icon: "bx bx-brain",
-        tags: ["Python", "LLMs", "RAG", "LangGraph"],
+        tags: ["LangGraph", "LangChain", "RAG", "LLMs", "Multi-Agent Systems", "PyTorch", "Python"],
         theme: "ai-ml",
     },
     {
@@ -133,7 +133,7 @@ export const domains = [
             "LLM, RAG, and multi-agent applications built end to end with Next.js, FastAPI, Node.js, and MongoDB.",
         href: "/fullstack",
         icon: "bx bx-code-block",
-        tags: ["Next.js", "FastAPI", "Node.js", "MongoDB"],
+        tags: ["Next.js", "React.js", "FastAPI", "Node.js", "TypeScript", "MongoDB", "Docker"],
         theme: "fullstack",
     },
     {
@@ -143,7 +143,7 @@ export const domains = [
             "Data cleaning, EDA, SQL, KPI analysis, and Tableau dashboards that turn messy data into clear business insights.",
         href: "/data-analyst",
         icon: "bx bx-bar-chart-alt-2",
-        tags: ["Python", "SQL", "Tableau", "Pandas"],
+        tags: ["SQL", "Python", "Pandas", "Tableau", "EDA", "A/B Testing", "Google Sheets"],
         theme: "data-analyst",
     },
 ];
