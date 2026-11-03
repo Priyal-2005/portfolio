@@ -11,6 +11,7 @@ import { useState } from 'react';
 const defaultNavItems = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
+  { href: '#journey', label: 'Journey' },
   { href: '#skills', label: 'Skills' },
   { href: '#domains', label: 'Domains' },
   { href: '#contact', label: 'Contact' },

@@ -29,6 +29,38 @@ export const homeAbout = {
     ],
 };
 
+/* ── Homepage Experience Journey (most recent first) ── */
+export const homeJourney = [
+    {
+        title: "AI/ML Intern",
+        issuer: "Leoforce, Hyderabad (In-Office)",
+        date: "Jul 2026 – Oct 2026",
+        category: "AI / ML",
+        description: "Trained and optimized a neural network model, improving accuracy by 10%, and refined system prompts for an additional 7% accuracy improvement.",
+    },
+    {
+        title: "n8n Automation Engineer",
+        issuer: "Mavence (Remote)",
+        date: "Apr 2026 – Jun 2026",
+        category: "Automation",
+        description: "Built n8n workflows integrating APIs and webhooks, improving operational efficiency by approximately 60%.",
+    },
+    {
+        title: "Frontend Developer (React.js)",
+        issuer: "Blue Planet Solutions (Remote)",
+        date: "Aug 2025 – Feb 2026",
+        category: "Frontend",
+        description: "Developed and optimized responsive user interfaces using React.js and modern front-end frameworks, collaborating with designers and backend developers on interactive features. Made Frontend Team Leader within 2 months of joining.",
+    },
+    {
+        title: "Learner's Profile",
+        issuer: "Rishihood University, Sonipat",
+        date: "Feb 2025 – Apr 2025",
+        category: "Product",
+        description: "CVs and interviews overlook key soft skills like resilience, curiosity, and diligence. This solution identifies top talent by accurately assessing these traits.",
+    },
+];
+
 /* ── Homepage Unified Skills ── */
 export const homeSkills = {
     Languages: ["Python", "TypeScript", "JavaScript"],

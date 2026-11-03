@@ -8,10 +8,12 @@ import DomainCard from './components/DomainCard';
 import CertificationCard from './components/CertificationCard';
 import SectionHeading from './components/SectionHeading';
 import SocialLinks from './components/SocialLinks';
+import TimelineItem from './components/TimelineItem';
 import {
   personalInfo,
   homeAbout,
   homeSkills,
+  homeJourney,
   homeCertifications,
   domains,
 } from './data/commonData';
@@ -105,6 +107,17 @@ export default function Home() {
               <p key={i}>{p}</p>
             ))}
             <a href="#domains" className="btn-box">Explore Domains</a>
+          </div>
+        </section>
+
+        {/* Experience Journey — most recent first */}
+        <section className="timeline-section" id="journey">
+          <SectionHeading title="Experience" subtitle="Journey" />
+          <div className="timeline-container">
+            <div className="timeline-line"></div>
+            {homeJourney.map((item, index) => (
+              <TimelineItem key={index} cert={item} />
+            ))}
           </div>
         </section>
 
