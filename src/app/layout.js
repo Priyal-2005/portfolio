@@ -2,13 +2,13 @@ import './globals.css';
 
 export const metadata = {
   metadataBase: new URL('https://priyalsarda.dev'), // Update to real domain if different
-  title: 'Priyal Sarda | Full-Stack Engineer & Founder',
-  description: 'Portfolio of Priyal Sarda, a Full-Stack Engineer, Founder of PhotoDost, and Co-Founder of Coding Champs. Specializing in React, Next.js, modern web technologies, and AI solutions.',
+  title: 'Priyal Sarda | AI/ML Engineer, Full-Stack Developer & Data Analyst',
+  description: 'Portfolio of Priyal Sarda, an AI/ML Engineer, AI Full-Stack Developer, and Data Analyst. Specializing in LLMs, RAG, multi-agent systems, Next.js, FastAPI, SQL, and Tableau.',
   keywords: ['Priyal Sarda', 'Full-Stack Developer', 'AI Enthusiast', 'React Developer', 'Next.js', 'Portfolio', 'Software Engineer', 'Coding Champs', 'PhotoDost'],
   authors: [{ name: 'Priyal Sarda' }],
   creator: 'Priyal Sarda',
   openGraph: {
-    title: 'Priyal Sarda | Full-Stack Engineer',
+    title: 'Priyal Sarda | AI/ML Engineer, Full-Stack Developer & Data Analyst',
     description: 'Transforming ideas into impactful solutions. Explore my projects, skills, and journey.',
     url: 'https://priyalsarda.dev', 
     siteName: 'Priyal Sarda Portfolio',
@@ -25,8 +25,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Priyal Sarda | Full-Stack Engineer',
-    description: 'Full-Stack Engineer & Founder of PhotoDost and Coding Champs. Building scalable applications.',
+    title: 'Priyal Sarda | AI/ML Engineer, Full-Stack Developer & Data Analyst',
+    description: 'AI/ML Engineer, AI Full-Stack Developer, and Data Analyst building LLM, RAG, and multi-agent applications.',
     images: ['/images/profile.JPG'], 
     creator: '@priyalsarda',
   },

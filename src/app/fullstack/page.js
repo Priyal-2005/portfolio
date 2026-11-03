@@ -55,7 +55,7 @@ export default function FullstackPage() {
                         <SocialLinks className="home-sci" />
 
                         <div className="btn-group">
-                            <a href={personalInfo.resumeUrl} className="btn-box resume-btn" download>
+                            <a href={fullstackHero.resumeUrl} className="btn-box resume-btn" download>
                                 Download Resume
                             </a>
                             <a href="/#contact" className="btn-box btn-secondary">

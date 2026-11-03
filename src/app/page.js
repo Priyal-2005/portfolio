@@ -18,8 +18,9 @@ import {
 
 export default function Home() {
   const roles = [
-    "Full-Stack Engineer",
     "AI/ML Engineer",
+    "AI Full-Stack Engineer",
+    "Data Analyst",
     "n8n Automation Engineer",
     "Entrepreneur"
   ];
@@ -74,7 +75,7 @@ export default function Home() {
         <section className="domains" id="domains">
           <SectionHeading title="Explore My" subtitle="Engineering Domains" />
           <p className="domains-desc">
-            My work spans two engineering disciplines. Dive into either domain to see
+            My work spans three disciplines. Dive into either domain to see
             focused experience, projects, and skills.
           </p>
           <div className="domains-container">

@@ -1,6 +1,6 @@
 const socials = [
     {
-        href: 'https://www.linkedin.com/in/priyal-sarda-a38793323/',
+        href: 'https://www.linkedin.com/in/priyalsarda/',
         icon: 'bx bxl-linkedin',
         label: 'LinkedIn',
     },
@@ -8,6 +8,11 @@ const socials = [
         href: 'https://github.com/Priyal-2005',
         icon: 'bx bxl-github',
         label: 'GitHub',
+    },
+    {
+        href: 'https://www.kaggle.com/priyalsarda',
+        icon: 'bx bx-bar-chart-alt-2',
+        label: 'Kaggle',
     },
     {
         href: 'mailto:priyal.sarda2005@gmail.com',

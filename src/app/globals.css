@@ -975,7 +975,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1141,6 +1141,32 @@ section {
 .domain-card--fullstack:hover {
     box-shadow: 0 12px 40px rgba(52, 211, 153, 0.1),
                 0 0 0 1px rgba(96, 165, 250, 0.06);
+}
+
+/* ---- Per-card theme: Data Analyst ---- */
+.domain-card--data-analyst .domain-card-icon {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(251, 146, 60, 0.15));
+    border-color: rgba(251, 146, 60, 0.25);
+    color: #fbbf24;
+}
+
+.domain-card--data-analyst .domain-card-tag {
+    color: #fb923c;
+    background: rgba(251, 146, 60, 0.08);
+    border-color: rgba(251, 146, 60, 0.2);
+}
+
+.domain-card--data-analyst .domain-card-cta {
+    color: #fb923c;
+}
+
+.domain-card--data-analyst::before {
+    background: linear-gradient(90deg, #fbbf24, #fb923c);
+}
+
+.domain-card--data-analyst:hover {
+    box-shadow: 0 12px 40px rgba(251, 146, 60, 0.1),
+                0 0 0 1px rgba(251, 191, 36, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -1599,4 +1625,81 @@ section {
 .domain-fullstack .experience-date {
     color: #34d399;
     background: rgba(52, 211, 153, 0.06);
+}
+
+/* ---- Data Analyst Domain: SaaS / Product / Engineering ---- */
+.domain-data-analyst {
+    --domain-primary: #fbbf24;
+    --domain-accent: #fb923c;
+    --domain-highlight: #fb923c;
+    --domain-glow: rgba(251, 146, 60, 0.08);
+    --domain-card-bg: rgba(30, 20, 8, 0.6);
+    
+    --main-color: var(--domain-primary);
+    --accent-color: var(--domain-accent);
+    --highlight-color: var(--domain-highlight);
+}
+
+.domain-data-analyst .experience-card,
+.domain-data-analyst .project-card,
+.domain-data-analyst .skill-category {
+    background: var(--domain-card-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.domain-data-analyst .experience-card::before,
+.domain-data-analyst .project-card::before,
+.domain-data-analyst .skill-category::before {
+    background: linear-gradient(90deg, var(--domain-primary), var(--domain-accent));
+}
+
+.domain-data-analyst .experience-card:hover,
+.domain-data-analyst .project-card:hover,
+.domain-data-analyst .skill-category:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(251, 146, 60, 0.06);
+}
+
+.domain-data-analyst .experience-card { border-left-color: rgba(251, 146, 60, 0.15); }
+.domain-data-analyst .experience-card:hover { border-left-color: var(--domain-accent); }
+
+.domain-data-analyst .resume-btn { background: linear-gradient(135deg, var(--domain-primary), var(--domain-accent)); }
+.domain-data-analyst .resume-btn:hover { box-shadow: 0 8px 25px rgba(251, 146, 60, 0.35); }
+.domain-data-analyst .btn-box:hover { box-shadow: 0 4px 15px rgba(251, 191, 36, 0.35); }
+
+.domain-data-analyst .section-heading span {
+    background: linear-gradient(135deg, var(--domain-primary), var(--domain-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.domain-data-analyst .profile-box { background: linear-gradient(135deg, var(--domain-primary) 0%, var(--domain-accent) 100%); }
+
+.domain-data-analyst .tech-tag {
+    color: var(--domain-highlight);
+    background: rgba(251, 146, 60, 0.05);
+    border-color: rgba(251, 146, 60, 0.15);
+}
+
+.domain-data-analyst .skill-item { border-color: rgba(251, 146, 60, 0.1); }
+.domain-data-analyst .skill-item:hover {
+    border-color: var(--domain-highlight);
+    color: var(--domain-highlight);
+}
+
+.domain-data-analyst .project-details {
+    border-left-color: rgba(251, 191, 36, 0.2);
+}
+
+.domain-data-analyst .project-badge {
+    color: var(--domain-highlight);
+    background: rgba(251, 146, 60, 0.08);
+    border-color: rgba(251, 146, 60, 0.2);
+}
+
+/* Data Analyst experience date badge */
+.domain-data-analyst .experience-date {
+    color: #fb923c;
+    background: rgba(251, 146, 60, 0.06);
 }

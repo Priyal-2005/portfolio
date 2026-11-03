@@ -7,13 +7,14 @@
 /* ── Personal Info (shared across all pages) ── */
 export const personalInfo = {
     name: "Priyal Sarda",
-    role: "Full-Stack Engineer & AI Innovator",
+    role: "AI/ML Engineer, Full-Stack Developer & Data Analyst",
     bio: "I build end-to-end web products and design intelligent AI systems. Specialized in full-stack engineering, multi-agent LLM systems, and launching scalable digital prototypes.",
     email: "priyal.sarda2005@gmail.com",
-    phone: "+91 93911 54230",
+    phone: "+91 93911 53240",
     location: "Delhi, India",
-    linkedin: "https://www.linkedin.com/in/priyal-sarda-a38793323/",
+    linkedin: "https://www.linkedin.com/in/priyalsarda/",
     github: "https://github.com/Priyal-2005",
+    kaggle: "https://www.kaggle.com/priyalsarda",
     instagram: "https://www.instagram.com/itspriyalsarda/",
     resumeUrl: "/resume.pdf",
 };
@@ -23,19 +24,19 @@ export const homeAbout = {
     subtitle: "Product Builder, Student Entrepreneur & AI Engineer",
     paragraphs: [
         "My engineering journey is driven by a simple question: how can we translate code into tangible, real-world impact? I don't just write algorithms; I build products and launch startups. Whether creating a booking marketplace for local event photographers (PhotoDost) or winning a prototype competition at TiE Global, I thrive at the intersection of product engineering and entrepreneurship.",
-        "My passion for applied AI took shape during an intensive internship with Hewlett Packard Enterprise, where my machine learning model won the top prototype prize and earned me a personal letter of recommendation from HPE leadership. I love bringing high-agency energy to everything I do—from building multi-agent workflows with n8n to teaching programming concepts to children as the youngest certified pedagogy instructor at IIIT Hyderabad.",
+        "My passion for applied AI took shape through Azure-based ML, NLP, and computer vision projects that earned me a Letter of Recommendation from Hewlett Packard Enterprise. I love bringing high-agency energy to everything I do—from building multi-agent workflows with n8n to teaching programming concepts to children as the youngest certified pedagogy instructor at IIIT Hyderabad.",
         "I'm constantly pushing the boundaries of what I can build—whether architecting scalable system designs or designing custom spatial RAG pipelines at nationwide GenAI hackathons. I thrive in fast-paced startup environments and high-performance teams where shipping clean, robust code solves real problems.",
     ],
 };
 
 /* ── Homepage Unified Skills ── */
 export const homeSkills = {
-    Languages: ["JavaScript (ES6+)", "Python", "Java", "C++", "HTML5", "CSS3"],
-    Frontend: ["React.js", "Next.js", "Redux", "Bootstrap"],
-    Backend: ["Node.js", "Express.js", "Django", "FastAPI"],
-    "AI / ML": ["TensorFlow", "PyTorch", "LangChain", "NLP", "Computer Vision"],
-    Databases: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
-    Tools: ["Git & GitHub", "VS Code", "Postman", "Figma", "Vercel", "n8n"],
+    Languages: ["Python", "TypeScript", "JavaScript"],
+    Frontend: ["React.js", "Next.js", "Tailwind CSS"],
+    Backend: ["Node.js", "Express.js", "FastAPI"],
+    "AI / ML": ["LLMs", "GenAI", "RAG", "LangChain", "LangGraph", "TensorFlow", "PyTorch"],
+    Databases: ["MongoDB", "MySQL"],
+    Tools: ["Git", "Docker", "Postman", "Jira", "Azure", "AWS", "n8n"],
 };
 
 /* ── Homepage Certifications (Entrepreneurship & Cross-Domain) ── */
@@ -69,10 +70,10 @@ export const homeCertifications = [
         link: "https://drive.google.com/file/d/1gRKhINkr2JhvQ44vQXY7CbI3g6eHfoEQ/view?usp=sharing",
     },
     {
-        title: "Applied AI – Best Prototype Award",
+        title: "HPE Letter of Recommendation",
         issuer: "Hewlett Packard Enterprise",
-        date: "Aug – Oct 2022",
-        description: "Won best AI prototype — received Letter of Recommendation from HPE.",
+        date: "October 2022",
+        description: "Outstanding performance in Azure-based ML, NLP, and CV projects.",
         link: "https://drive.google.com/file/d/1Ia_47xYRQg2q1-NYcg16HbX9dxIqwlNd/view?usp=sharing",
     },
 ];
@@ -89,17 +90,27 @@ export const domains = [
             "Machine learning models, NLP pipelines, and intelligent systems. Exploring the frontier of applied AI.",
         href: "/ai-ml",
         icon: "bx bx-brain",
-        tags: ["Python", "NLP", "Machine Learning", "TensorFlow"],
+        tags: ["Python", "LLMs", "RAG", "LangGraph"],
         theme: "ai-ml",
     },
     {
         id: "fullstack",
-        title: "Fullstack Engineer",
+        title: "AI Full-Stack Engineer",
         description:
-            "End-to-end web applications from REST APIs to pixel-perfect frontends. MERN stack and Next.js specialist.",
+            "LLM, RAG, and multi-agent applications built end to end with Next.js, FastAPI, Node.js, and MongoDB.",
         href: "/fullstack",
         icon: "bx bx-code-block",
-        tags: ["React", "Next.js", "Node.js", "MongoDB"],
+        tags: ["Next.js", "FastAPI", "Node.js", "MongoDB"],
         theme: "fullstack",
+    },
+    {
+        id: "data-analyst",
+        title: "Data Analyst",
+        description:
+            "Data cleaning, EDA, SQL, KPI analysis, and Tableau dashboards that turn messy data into clear business insights.",
+        href: "/data-analyst",
+        icon: "bx bx-bar-chart-alt-2",
+        tags: ["Python", "SQL", "Tableau", "Pandas"],
+        theme: "data-analyst",
     },
 ];

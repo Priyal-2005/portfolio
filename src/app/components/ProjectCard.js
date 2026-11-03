@@ -56,6 +56,18 @@ export default function ProjectCard({ project }) {
                             <span>Source Code</span>
                         </a>
                     )}
+                    {project.dashboard && (
+                        <a
+                            href={project.dashboard}
+                            className="project-link demo-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View ${project.title} dashboard`}
+                        >
+                            <i className="bx bx-bar-chart-alt-2"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    )}
                     {project.live && (
                         <a
                             href={project.live}
